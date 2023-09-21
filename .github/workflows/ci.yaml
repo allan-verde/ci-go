@@ -6,6 +6,9 @@ on:
 
 jobs:
   check-application:
+    strategy:
+      matrix:
+        go: [1.21, 1.15]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
